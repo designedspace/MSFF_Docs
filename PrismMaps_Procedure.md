@@ -1,4 +1,4 @@
-# Procedure for Producing Prism Maps
+# Making MSFF Prism Maps
 
 **Eric M. Huntley, MUP**  
 Political Space Economy Lab, Virginia Tech  
@@ -13,13 +13,39 @@ The following software packages are required:
   * VRay  
   * Adobe Photoshop
 
-
-
 ## 1. Symbolize and Extrude Map in ArcScene
 
-The 
+#### 1.1 Import Shapefiles
 
-###1.1 
+1. Add a connection to your project folder using the ArcScene catalog window. 
+2. Add the shapefile that contains the data of interest (in this example, 2004 HMDA data aggregated to Census Tracts in Michigan), as well as any additional features of interest (e.g., bodies of water, political boundaries).  
+![symbology](Files/Media/1_1_symbology.png "Symbology")
+3. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a black-to-white gradient. Select the maximum number of classes (32) and use the quantile classification method. Make sure to flip the symbols so that higher values receive brighter colors and to remove all symbol borders.
+    * N.b., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.
+4. Navigate to the Extrusion tab.
+
+#### 1.2 Symbolize and Extrude Enumeration Units
+#### 1.3 Export as VRML (.wrl)
+
+## 2. Render in Rhinoceros
+
+#### 2.1 Import VRML file
+#### 2.2 Rotate imported meshes
+#### 2.3 Set camera
+#### 2.4 Create rectangular light
+#### 2.5 Modify VRay settings
+#### 2.6 Render
+#### 2.7 Make2D
+
+## 3. Linework in Illustrator
+
+#### 3.1
+####
+####
+
+## 4. Retouch in Photoshop
+
+
 
 ## References
 Jenks, George F. and Fred C. Caspall. 1971. "Error on Choroplethic Maps: Definition, Measurement, Reduction." *Annals of the Association of Americal Geographers* 61 (2): 217-244.
