@@ -49,9 +49,10 @@ The following software packages are required:
 #### 2.2 Set camera
 
 1. Change the perspective viewport's properties such that it uses parallel projection instead of perspective.  
+2. In the top viewport, create a new line of arbitrary length at a 0 degree angle whose start is the project's origin (this will be used to set the camera and its target). In the front viewport, rotate it 45 degrees. In the top viewport, rotate it so that it makes an angle appropriate for the area under consideration. Pictured below is the the result of this process in the case of Detroit.  
 ![set camera](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_2_camera.PNG "Set camera")  
-2. In the top viewport, create a new line of arbitrary length at a 0 degree angle whose start is the project's origin (this will be used to set the camera and its target). In the front viewport, rotate it 45 degrees. In the top viewport, rotate it so that it makes an angle appropriate for the area under consideration. Pictured above is the the result of this process in the case of Detroit.  
-3. Make sure the perspective viewport is active. Navigate to "Place Camera and Target" (View > Set Camera). Place the camera at the elevated end of the line, and place the target at the end of the line in contact with the ground plane. Now adjust the zoom settings until the frame is positioned as desired.
+3. Make sure the perspective viewport is active. Navigate to "Place Camera and Target" (View > Set Camera). Place the camera at the elevated end of the line, and place the target at the end of the line in contact with the ground plane. Now adjust the zoom settings until the frame is positioned as desired. Pictured below is (again) the result of this process in the case of Detroit.  
+![camera placement](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_2_cameraplacement.PNG "Camera Placement")  
 
 #### 2.3 Create rectangular light
 
