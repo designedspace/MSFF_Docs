@@ -19,9 +19,9 @@ The following software packages are required:
 
 1. Add a connection to your project folder using the ArcScene catalog window. 
 2. Add the shapefile that contains the data of interest (in this example, 2004 HMDA data aggregated to Census Tracts in Michigan), as well as any additional features of interest (e.g., bodies of water, political boundaries).  
-![symbology](Files/Media/1_1_symbology.png "Symbology")
+![symbology](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_1_symbology.PNG "Symbology")
 3. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a black-to-white gradient. Select the maximum number of classes (32) and use the quantile classification method. Make sure to flip the symbols so that higher values receive brighter colors and to remove all symbol borders.
-    * N.b., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.
+    * *N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.*
 4. Navigate to the Extrusion tab.
 
 #### 1.2 Symbolize and Extrude Enumeration Units
