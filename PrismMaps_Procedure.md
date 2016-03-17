@@ -27,18 +27,18 @@ The following software packages are required:
 
 ![symbology](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_symbology.PNG "Symbology")  
 1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a black-to-white gradient. Select the maximum number of classes (32) and use the quantile classification method. Make sure to flip the symbols so that higher values receive brighter colors and to remove all symbol borders.  
-    * *N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.*  
+    * N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.
     
 ![extrusion](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_extrusion.PNG "Extrusion")  
-2. Navigate to the Extrusion tab and check "Extrude Features in Layer." Select the same variable as above. Note that, depending on the variable's range, it may be necessary to scale the value (as shown).
+2. Navigate to the Extrusion tab and check "Extrude Features in Layer." Select the same variable as above. Note that, depending on the variable's range, it may be necessary to scale the value (as shown).  
 
-#### 1.3 Export as VRML (.wrl)
+#### 1.3 Export as VRML (.wrl)  
 ![export](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_3_export.PNG "Export at VRML")  
-1. Export the scene as a VRML (.wrl) file (File > Export > 3D). As mentioned above, a persistent bug in versions of ArcScene later than 10.1 might cause the program to crash, preventing a 3D export. If this is the case, it will be necessary to downgrade ArcScene.
+1. Export the scene as a VRML (.wrl) file (File > Export > 3D). As mentioned above, a persistent bug in versions of ArcScene later than 10.1 might cause the program to crash, preventing a 3D export. If this is the case, it will be necessary to downgrade ArcScene.  
 
-## 2. Render in Rhinoceros
+## 2. Render in Rhinoceros  
 
-#### 2.1 Import VRML file
+#### 2.1 Import VRML file  
 
 1. Create a new Rhino project using the "Large Objects - Feet.3dm" template.  
 ![rotate](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_1_rotate.gif "Rotate model")  
@@ -46,20 +46,23 @@ The following software packages are required:
 3. Delete the directional light that was imported along with the model.  
 4. Relocate any supplementary geometry (boundaries, lakes, etc.) to a different layer.  
 
-#### 2.2 Set camera
+#### 2.2 Set camera  
 
 1. Change the perspective viewport's properties such that it uses parallel projection instead of perspective.  
 2. In the top viewport, create a new line of arbitrary length at a 0 degree angle whose start is the project's origin (this will be used to set the camera and its target). In the front viewport, rotate it 45 degrees. In the top viewport, rotate it so that it makes an angle appropriate for the area under consideration. Pictured below is the the result of this process in the case of Detroit.  
 ![set camera](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_2_camera.PNG "Set camera")  
 3. Make sure the perspective viewport is active. Navigate to "Place Camera and Target" (View > Set Camera). Place the camera at the elevated end of the line, and place the target at the end of the line in contact with the ground plane. Now adjust the zoom settings until the frame is positioned as desired. Pictured below is (again) the result of this process in the case of Detroit.  
 ![camera placement](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_2_cameraplacement.PNG "Camera Placement")  
+4. Save the view using the "NamedView" command.  
 
-#### 2.3 Create rectangular light
+#### 2.3 Light and Render  
+1. Create a large rectangular light using the "RectangularLight" command. Size it so that is larger than the area of interest. Move it vertically by 3,750,000 ft - it's important to keep this consistent, as the intensity of the light varies with distance.  
+2. The desired format for these images is 10"x10", printed at 300 dpi; therefore, change the VRay output size to 3000x3000 and ensure that "override viewport" is checked. Also check that the "05_VeryHigh_Quality_Exterior" preset is selected.  
+![rendered](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_3_rendered.PNG "Rendered")  
+3. Render! The output should look something like the above image. Save it as a PNG file to maintain background transparency.
+4. 
 
-
-#### 2.4 Modify VRay settings
-#### 2.5 Render
-#### 2.6 Make2D
+#### 2.4 Make2D
 
 ## 3. Linework in Illustrator
 
