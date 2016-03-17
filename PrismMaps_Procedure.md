@@ -4,13 +4,14 @@
 Political Space Economy Lab, Virginia Tech  
 New Mappings Collaboratory, University of Kentucky
 
-This procedure will produce [prism maps](http://blog.thematicmapping.org/2008/05/prism-maps-in-google-earth-and-uuorld.html) (also called 3d Choropleth maps) according to the style developed by the author for the Political Space Economy Lab's "Moonlights, Sunspots, and Frontier Finance" in Fall 2013. A prism map is a thematic map in which "each enumeration unit area as the base of a prism whose height is proportional to the intensity value of the mapped phenomenon" (Jenks and Caspall 1971, 219). These are seen by some cartographers as the most effective way of visualizing numerical data in a choropleth map (Slocum et al. 2004).
+This procedure will produce [prism maps](http://blog.thematicmapping.org/2008/05/prism-maps-in-google-earth-and-uuorld.html) (also called 3D Choropleth maps) according to the style developed by the author for the Political Space Economy Lab's "Moonlights, Sunspots, and Frontier Finance" exhibit in Fall 2013. A prism map is a thematic map in which "each enumeration unit area as the base of a prism whose height is proportional to the intensity value of the mapped phenomenon" (Jenks and Caspall 1971, 219). These are seen by some cartographers as the most effective way of visualizing numerical data in a choropleth map (Slocum et al. 2004).
 
 The following software packages are required:  
   * ESRI ArcScene 10.1  
     * *N.B., releases after 10.1 contain a still-unsolved bug (known as Bug #000085475) that prevents some users (including this one) from exporting scenes in the VRML file format. I spent two afternoons searching for a workaround, but ultimately had to downgrade my Arc installation*.
   * Rhinoceros  
   * VRay  
+  * Adobe Illustrator
   * Adobe Photoshop
 
 ## 1. Symbolize and Extrude Map in ArcScene
@@ -20,7 +21,7 @@ The following software packages are required:
 1. Add a connection to your project folder using the ArcScene catalog window. 
 ![arcscene](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_1_arcscene.PNG "ArcScene")  
 2. Add the shapefile that contains the data of interest (in this example, 2004 HMDA data aggregated to Census Tracts in Michigan), as well as any additional features of interest (e.g., bodies of water, political boundaries).  
-3. Check the scene's coordinate system; if the scene is not projected appropriately, select an appropriate projection (State Plane or UTM Zone).
+3. Check the scene's coordinate system; if the scene is not projected appropriately, select an appropriate projection. In this example, I used NAD_1927_Michigan_GeoRef_Feet_US.
 
 #### 1.2 Symbolize and Extrude Enumeration Units
 
@@ -36,6 +37,12 @@ The following software packages are required:
 ## 2. Render in Rhinoceros
 
 #### 2.1 Import VRML file
+
+1. Create a new Rhino project using the "Large Objects - Feet.3dm" template.  
+![rotate](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_1_rotate.gif "Rotate model")  
+2. Import the VRML file exported from ArcScene. The first thing you'll notice is that the model is rotated in such a way that its ground plane is along Rhino's z-axis. To fix this, ensure that the Right viewport is active, select all objects, type "rotate", type "0", hold shift and click at an angle orthoganal to the model, and type "90" to rotate the model 90 degrees. The model's ground plane should now coincide with Rhino's x-y plane.  
+3.
+
 #### 2.2 Set camera
 #### 2.3 Create rectangular light
 #### 2.4 Modify VRay settings
