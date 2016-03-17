@@ -11,19 +11,18 @@ The following software packages are required:
     * *N.B., releases after 10.1 contain a still-unsolved bug (known as Bug #000085475) that prevents some users (including this one) from exporting scenes in the VRML file format. I spent two afternoons searching for a workaround, but ultimately had to downgrade my Arc installation*.
   * Rhinoceros  
   * VRay  
-  * Adobe Illustrator
-  * Adobe Photoshop
+  * Adobe Photoshop  
 
-## 1. Symbolize and Extrude Map in ArcScene
+## 1. Symbolize and Extrude Map in ArcScene  
 
-#### 1.1 Import Shapefiles
+#### 1.1 Import Shapefiles  
 
 1. Add a connection to your project folder using the ArcScene catalog window. 
 ![arcscene](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_1_arcscene.PNG "ArcScene")  
-2. Add the shapefile that contains the data of interest (in this example, 2004 HMDA data aggregated to Census Tracts in Michigan), as well as any additional features of interest (e.g., bodies of water, political boundaries).  
+2. Add the shapefile that contains the data of interest (in this example, 2004 HMDA data aggregated to Census Tracts in Michigan), as well as any additional features that might prove cartographically useful (in this example, the Detroit municipal boundary, and the land areas of Ontario, Ohio, and Indiana).
 3. Check the scene's coordinate system; if the scene is not projected appropriately, select an appropriate projection. In this example, I used NAD_1927_Michigan_GeoRef_Feet_US.
 
-#### 1.2 Symbolize and Extrude Enumeration Units  
+#### 1.2 Symbolize and Extrude Enumeration Units   
 
 ![symbology](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_symbology.PNG "Symbology")  
 1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a black-to-white gradient. Select the maximum number of classes (32) and use the quantile classification method. Make sure to flip the symbols so that higher values receive brighter colors and to remove all symbol borders.  
@@ -56,24 +55,19 @@ The following software packages are required:
 4. Save the view using the "NamedView" command.  
 
 #### 2.3 Light and Render  
-1. Create a large rectangular light using the "RectangularLight" command. Size it so that is larger than the area of interest. Move it vertically by 3,750,000 ft - it's important to keep this consistent, as the intensity of the light varies with distance.  
-2. The desired format for these images is 10"x10", printed at 300 dpi; therefore, change the VRay output size to 3000x3000 and ensure that "override viewport" is checked. Also check that the "05_VeryHigh_Quality_Exterior" preset is selected.  
+1. Create a large rectangular light on a new layer using the "RectangularLight" command. Size it so that is larger than the area of interest. Move it vertically by 3,750,000 ft - it's important to keep this consistent, as the intensity of the light varies with distance.  
+2. The desired format for these images is 10"x10", printed at 300 dpi; therefore, change the VRay output size to 3000x3000 and ensure that "override viewport" is checked. Also check that the "05_VeryHigh_Quality_Exterior" preset is selected.  Hide all layers except the light and the data of interest.
 ![rendered](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_3_render.PNG "Rendered")  
-3. Render! The output should look something like the above image. Save it as a PNG file to maintain background transparency.
+3. Render! The output should look something like the above image. Save it as a PNG file to maintain background transparency.  
+4. Hide the layer of interest and display additional layers (in this example, the Detroit municipal boundary and surrounding land areas). Render them one by one, again making sure to save them as PNGs to preserve transparency.
 
-#### 2.4 Make2D
+## 3. Retouch in Photoshop
 
-## 3. Linework in Illustrator
-
-#### 3.1
-####
-####
-
-## 4. Retouch in Photoshop
+#### 
 
 
 
 ## References
-Jenks, George F. and Fred C. Caspall. 1971. "Error on Choroplethic Maps: Definition, Measurement, Reduction." *Annals of the Association of Americal Geographers* 61 (2): 217-244.
+Jenks, George F. and Fred C. Caspall. 1971. "Error on Choroplethic Maps: Definition, Measurement, Reduction." *Annals of the Association of American Geographers* 61 (2): 217-244.
 
 Slocum, Terry A., Robert B. McMaster, Fritz C. Kessler, and Hugh H. Howard. 2004. *Thematic Cartography and Geographic Visualization*. 2nd ed. Upper Saddle River: Prentice Hall.
