@@ -58,9 +58,8 @@ The following software packages are required:
 #### 2.3 Light and Render  
 1. Create a large rectangular light using the "RectangularLight" command. Size it so that is larger than the area of interest. Move it vertically by 3,750,000 ft - it's important to keep this consistent, as the intensity of the light varies with distance.  
 2. The desired format for these images is 10"x10", printed at 300 dpi; therefore, change the VRay output size to 3000x3000 and ensure that "override viewport" is checked. Also check that the "05_VeryHigh_Quality_Exterior" preset is selected.  
-![rendered](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_3_rendered.PNG "Rendered")  
+![rendered](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_3_render.PNG "Rendered")  
 3. Render! The output should look something like the above image. Save it as a PNG file to maintain background transparency.
-4. 
 
 #### 2.4 Make2D
 
