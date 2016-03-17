@@ -23,16 +23,18 @@ The following software packages are required:
 2. Add the shapefile that contains the data of interest (in this example, 2004 HMDA data aggregated to Census Tracts in Michigan), as well as any additional features of interest (e.g., bodies of water, political boundaries).  
 3. Check the scene's coordinate system; if the scene is not projected appropriately, select an appropriate projection. In this example, I used NAD_1927_Michigan_GeoRef_Feet_US.
 
-#### 1.2 Symbolize and Extrude Enumeration Units
+#### 1.2 Symbolize and Extrude Enumeration Units  
 
 ![symbology](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_symbology.PNG "Symbology")  
-1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a black-to-white gradient. Select the maximum number of classes (32) and use the quantile classification method. Make sure to flip the symbols so that higher values receive brighter colors and to remove all symbol borders.
-    * *N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.  
+1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a black-to-white gradient. Select the maximum number of classes (32) and use the quantile classification method. Make sure to flip the symbols so that higher values receive brighter colors and to remove all symbol borders.  
+    * *N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.*  
+    
 ![extrusion](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_extrusion.PNG "Extrusion")  
 2. Navigate to the Extrusion tab and check "Extrude Features in Layer." Select the same variable as above. Note that, depending on the variable's range, it may be necessary to scale the value (as shown).
+
 #### 1.3 Export as VRML (.wrl)
 ![export](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_3_export.PNG "Export at VRML")  
-1. Export the scene as a VRML (.wrl) file (File > Export > 3D). As mentioned above, a persistent bug in versions of ArcScene later than 10.1 might prevent a 3D export. If this is the case, it will be necessary to downgrade ArcScene.
+1. Export the scene as a VRML (.wrl) file (File > Export > 3D). As mentioned above, a persistent bug in versions of ArcScene later than 10.1 might cause the program to crash, preventing a 3D export. If this is the case, it will be necessary to downgrade ArcScene.
 
 ## 2. Render in Rhinoceros
 
@@ -41,10 +43,19 @@ The following software packages are required:
 1. Create a new Rhino project using the "Large Objects - Feet.3dm" template.  
 ![rotate](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_1_rotate.gif "Rotate model")  
 2. Import the VRML file exported from ArcScene. The first thing you'll notice is that the model is rotated in such a way that its ground plane is along Rhino's z-axis. To fix this, ensure that the Right viewport is active, select all objects, type "rotate", type "0", hold shift and click at an angle orthoganal to the model, and type "90" to rotate the model 90 degrees. The model's ground plane should now coincide with Rhino's x-y plane.  
-3.
+3. Delete the directional light that was imported along with the model.  
+4. Relocate any supplementary geometry (boundaries, lakes, etc.) to a different layer.  
 
 #### 2.2 Set camera
+
+1. Change the perspective viewport's properties such that it uses parallel projection instead of perspective.  
+![set camera](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_2_camera.PNG "Set camera")  
+2. In the top viewport, create a new line of arbitrary length at a 0 degree angle whose start is the project's origin (this will be used to set the camera and its target). In the front viewport, rotate it 45 degrees. In the top viewport, rotate it so that it makes an angle appropriate for the area under consideration. Pictured above is the the result of this process in the case of Detroit.  
+3. Make sure the perspective viewport is active. Navigate to "Place Camera and Target" (View > Set Camera). Place the camera at the elevated end of the line, and place the target at the end of the line in contact with the ground plane. Now adjust the zoom settings until the frame is positioned as desired.
+
 #### 2.3 Create rectangular light
+
+
 #### 2.4 Modify VRay settings
 #### 2.5 Render
 #### 2.6 Make2D
