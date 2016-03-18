@@ -1,8 +1,8 @@
 # Making MSFF Prism Maps
 
 **Eric M. Huntley, MUP**  
+New Mappings Collaboratory, University of Kentucky  
 Political Space Economy Lab, Virginia Tech  
-New Mappings Collaboratory, University of Kentucky
 
 ![final image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/0_FinalImage.PNG "Final image")  
 
