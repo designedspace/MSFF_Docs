@@ -4,6 +4,8 @@
 Political Space Economy Lab, Virginia Tech  
 New Mappings Collaboratory, University of Kentucky
 
+![final image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/0_FinalImage.PNG "Final image")  
+
 This procedure will produce [prism maps](http://blog.thematicmapping.org/2008/05/prism-maps-in-google-earth-and-uuorld.html) (also called 3D Choropleth maps) according to the style developed by the author for the Political Space Economy Lab's "Moonlights, Sunspots, and Frontier Finance" exhibit in Fall 2013. A prism map is a thematic map in which "each enumeration unit area as the base of a prism whose height is proportional to the intensity value of the mapped phenomenon" (Jenks and Caspall 1971, 219). These are seen by some cartographers as the most effective way of visualizing numerical data in a choropleth map (Slocum et al. 2004).
 
 The following software packages are required:  
