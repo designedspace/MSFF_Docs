@@ -11,7 +11,7 @@ The following software packages are required:
     * *N.B., releases after 10.1 contain a still-unsolved bug (known as Bug #000085475) that prevents some users (including this one) from exporting scenes in the VRML file format. I spent two afternoons searching for a workaround, but ultimately had to downgrade my Arc installation*.
   * Rhinoceros  
   * VRay  
-  * Adobe Photoshop  
+  * Photoshop  
 
 ## 1. Symbolize and Extrude Map in ArcScene  
 
@@ -25,7 +25,7 @@ The following software packages are required:
 #### 1.2 Symbolize and Extrude Enumeration Units   
 
 ![symbology](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_symbology.PNG "Symbology")  
-1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a black-to-white gradient. Select the maximum number of classes (32) and use the quantile classification method. Make sure to flip the symbols so that higher values receive brighter colors and to remove all symbol borders.  
+1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a white-to-black gradient. Limit the number of classes to 4 or 5 and choose an appropriate classification method. Make sure that the gradient is such that higher values receive darker colors - while this appears to be the opposite of the desired result, the image will be inverted later in Photoshop, which imbues the prisms with the eerie glowing-from-the-base charachter.  
     * N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.
     
 ![extrusion](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_extrusion.PNG "Extrusion")  
@@ -63,7 +63,12 @@ The following software packages are required:
 
 ## 3. Retouch in Photoshop
 
-#### 
+#### 3.1 Add and Invert Rendered Data
+1. Open the rendered prism map, change the file to CMYK color space, and invert it (ctrl-i).
+![levels](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_1levels.PNG "Levels")  
+2. Using the levels tool, pull up the shadows (left-most triangle) so that it sits just below the first peak. At the end of the process, the image should look like the image below.
+![adjusted image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_2adjusted.PNG "Adjusted Image")  
+3.
 
 
 
