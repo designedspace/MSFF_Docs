@@ -56,19 +56,25 @@ The following software packages are required:
 
 #### 2.3 Light and Render  
 1. Create a large rectangular light on a new layer using the "RectangularLight" command. Size it so that is larger than the area of interest. Move it vertically by 3,750,000 ft - it's important to keep this consistent, as the intensity of the light varies with distance.  
-2. The desired format for these images is 10"x10", printed at 300 dpi; therefore, change the VRay output size to 3000x3000 and ensure that "override viewport" is checked. Also check that the "05_VeryHigh_Quality_Exterior" preset is selected.  Hide all layers except the light and the data of interest.
+2. The desired format for these images is 10"x10", printed at 300 dpi; therefore, change the VRay output size to 3000x3000 and ensure that "override viewport" is checked. Also check that the "05_VeryHigh_Quality_Exterior" preset is selected.  Hide all layers except the light and the data of interest.  
 ![rendered](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_3_render.PNG "Rendered")  
 3. Render! The output should look something like the above image. Save it as a PNG file to maintain background transparency.  
-4. Hide the layer of interest and display additional layers (in this example, the Detroit municipal boundary and surrounding land areas). Render them one by one, again making sure to save them as PNGs to preserve transparency.
+4. Hide the layer of interest and display additional layers (in this example, the Detroit municipal boundary and surrounding land areas). Render them one by one, again making sure to save them as PNGs to preserve transparency.  
 
-## 3. Retouch in Photoshop
+## 3. Retouch in Photoshop  
 
-#### 3.1 Add and Invert Rendered Data
-1. Open the rendered prism map, change the file to CMYK color space, and invert it (ctrl-i).
+In all that follows, the color - white or magenta - should be decided on a case-by-case basis.
+
+* **MSFF Magenta** (C=1, M=98, Y=0, K=0) should be used where a 'negative' variable is under consideration (e.g., mortgage denials).  
+* **White** (C=0,M=0,Y=0,K=0) should be used where a a 'positive' variable is under consideration (e.g., amount of mortgage capital).
+
+#### 3.1 Add, Invert, and Color Rendered Data  
+1. Open the rendered prism map, change the file to CMYK color space, and invert it (ctrl-i). Add a new layer and fill it with true black (C=100, M=100, Y=100, K=100).  
 ![levels](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_1levels.PNG "Levels")  
-2. Using the levels tool, pull up the shadows (left-most triangle) so that it sits just below the first peak. At the end of the process, the image should look like the image below.
-![adjusted image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_2adjusted.PNG "Adjusted Image")  
-3.
+2. Using the levels tool, pull up the shadows (left-most triangle) so that it sits just below the first peak.
+3. Add a new layer fill it with the MSFF magenta (C=1, M=98, Y=0, K=0) and switch its blend mode to overlay (*Skip this step if making a 'white' map*).  
+4. Using the layer's blending options, create a stroke with a width of 3 pixels using the map color around the rendered data. The resulting image should look like the one below.  
+![resulting image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_2resulting.PNG "Resulting Image")  
 
 
 
