@@ -73,7 +73,7 @@ In all that follows, the color - white or magenta - should be decided on a case-
 1. Open the rendered prism map, invert it (ctrl-i), and change the file to CMYK color space. **It's crucial that you invert before converting to CMYK!** Add a new background layer and fill it with true black (C=100, M=100, Y=100, K=100).  
 ![levels](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_1levels.PNG "Levels")  
 2. Using the levels tool, pull up the shadows (left-most triangle) so that it sits below the first peak - you don't want to lose all detail in the darkest greys. A value of 20 worked well for me.
-3. Add a new layer fill it with the MSFF magenta (C=1, M=98, Y=0, K=0) and switch its blend mode to overlay (*Skip this step if making a 'white' map*).  
+3. Add a new layer fill it with the MSFF magenta (C=1, M=98, Y=0, K=0) and switch its blend mode to overlay. This should always occupy the top position in the layer draw order. (*Skip this step if making a 'white' map*).  
 4. Using the layer's blending options, create a stroke with a width of 3 pixels using the map color around the rendered data. 
 5. Add 45 degree diagonal hatch below the data layer. See the resources folder in this repo for the one I used in both Illustrator and PNG format. The resulting image should look like the one below.  
 ![resulting image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_2resulting.PNG "Resulting Image")  
