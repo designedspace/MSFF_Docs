@@ -25,7 +25,7 @@ The following software packages are required:
 #### 1.2 Symbolize and Extrude Enumeration Units   
 
 ![symbology](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_symbology.PNG "Symbology")  
-1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a white-to-black gradient. Limit the number of classes to 4 or 5 and choose an appropriate classification method. Make sure that the gradient is such that higher values receive darker colors - while this appears to be the opposite of the desired result, the image will be inverted later in Photoshop, which imbues the prisms with the eerie glowing-from-the-base charachter.  
+1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a white-to-grey gradient. Limit the number of classes to 4 or 5 and choose an appropriate classification method. Make sure that the gradient is such that higher values receive darker colors - while this appears to be the opposite of the desired result, the image will be inverted later in Photoshop, which imbues the prisms with the eerie glowing-from-the-base character. The white-to-grey gradient is chosen over a white-to-black for similar reasons.  
     * N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.
     
 ![extrusion](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_extrusion.PNG "Extrusion")  
@@ -48,7 +48,7 @@ The following software packages are required:
 #### 2.2 Set camera  
 
 1. Change the perspective viewport's properties such that it uses parallel projection instead of perspective.  
-2. In the top viewport, create a new line of arbitrary length at a 0 degree angle whose start is the project's origin (this will be used to set the camera and its target). In the front viewport, rotate it 45 degrees. In the top viewport, rotate it so that it makes an angle appropriate for the area under consideration. Pictured below is the the result of this process in the case of Detroit.  
+2. In the top viewport, create a new line of arbitrary length at a 0 degree angle whose start is the project's origin (this will be used to set the camera and its target). In the front viewport, rotate it up from the ground plane by 30 degrees. In the top viewport, rotate it so that it makes an angle appropriate for the area under consideration. Pictured below is the the result of this process in the case of Detroit.  
 ![set camera](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_2_camera.PNG "Set camera")  
 3. Make sure the perspective viewport is active. Navigate to "Place Camera and Target" (View > Set Camera). Place the camera at the elevated end of the line, and place the target at the end of the line in contact with the ground plane. Now adjust the zoom settings until the frame is positioned as desired. Pictured below is (again) the result of this process in the case of Detroit.  
 ![camera placement](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/2_2_cameraplacement.PNG "Camera Placement")  
