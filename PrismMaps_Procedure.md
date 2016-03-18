@@ -28,8 +28,7 @@ The following software packages are required:
 
 ![symbology](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_symbology.PNG "Symbology")  
 1. Open the properties window for the layer of interest and navigate to the Symbology tab. Symbolize the variable of interest using a graduated color scheme with a white-to-grey gradient. Limit the number of classes to 4 or 5 and choose an appropriate classification method. Make sure that the gradient is such that higher values receive darker colors - while this appears to be the opposite of the desired result, the image will be inverted later in Photoshop, which imbues the prisms with the eerie glowing-from-the-base character. The white-to-grey gradient is chosen over a white-to-black for similar reasons.  
-    * N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.
-    
+    * N.B., if you are producing a series of maps that are meant to be comparable, all maps should use the same classification scheme and this classification scheme should be based on the year with the largest range of values.    
 ![extrusion](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_2_extrusion.PNG "Extrusion")  
 2. Navigate to the Extrusion tab and check "Extrude Features in Layer." Select the same variable as above. Note that, depending on the variable's range, it may be necessary to scale the value (as shown).  
 
@@ -75,10 +74,21 @@ In all that follows, the color - white or magenta - should be decided on a case-
 ![levels](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_1levels.PNG "Levels")  
 2. Using the levels tool, pull up the shadows (left-most triangle) so that it sits below the first peak - you don't want to lose all detail in the darkest greys. A value of 20 worked well for me.
 3. Add a new layer fill it with the MSFF magenta (C=1, M=98, Y=0, K=0) and switch its blend mode to overlay (*Skip this step if making a 'white' map*).  
-4. Using the layer's blending options, create a stroke with a width of 3 pixels using the map color around the rendered data. The resulting image should look like the one below.  
+4. Using the layer's blending options, create a stroke with a width of 3 pixels using the map color around the rendered data. 
+5. Add 45 degree diagonal hatch below the data layer. See the resources folder in this repo for the one I used in both Illustrator and PNG format. The resulting image should look like the one below.  
 ![resulting image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_1_2resulting.PNG "Resulting Image")  
 
+#### 3.2 Add Additional Elements  
 
+This last collection of steps must be tailored to the needs of a particular map. As such, the following should only be taken as guidance.  
+
+1. Add any additional geometry you rendered out of Rhino. In this example case, I added the land area that surrounds Michigan, including Ontario, Indiana, and Ohio (data sourced from the US and Canadian Census respectively), as well as the Detroit municipal boundary (in a separate render).  
+![other land area](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_2_1canadaohio.PNG "Other Land")  
+2. Using the land area's blending options, I applied a true black (C=100, M=100, Y=100, K=100) color overlay and a stroke in MSFF magenta of width 3 px. As a result, Lake St. Clair and Lake Erie are filled with a hatch and the surrounding land areas are simply outlined in the map color.  
+![detroit offset](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/3_2_2detroit.PNG "Detroit")  
+3. I then added Detroit's muncipal boundary, added a white color overlay and a magenta stroke using its blending options (this would be a magenta overlay and a white stroke in the case of a white map). I set the opacity of this layer to 40%. I then duplicated this layer, changed its overlay to MSFF magenta, removed the stroke, made it fully opaque, and vertically offset it. Finally, I added some leading lines to help guide the reader's eye.
+4. The final map appears below.  
+![final image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/0_FinalImage.PNG "Final image") 
 
 ## References
 Jenks, George F. and Fred C. Caspall. 1971. "Error on Choroplethic Maps: Definition, Measurement, Reduction." *Annals of the Association of American Geographers* 61 (2): 217-244.
