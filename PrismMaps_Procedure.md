@@ -6,7 +6,7 @@ Political Space Economy Lab, Virginia Tech
 
 ![final image](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/0_FinalImage.PNG "Final image")  
 
-This procedure will produce [prism maps](http://blog.thematicmapping.org/2008/05/prism-maps-in-google-earth-and-uuorld.html) (also called 3D Choropleth maps) according to the style developed by the author for the Political Space Economy Lab's "Moonlights, Sunspots, and Frontier Finance" exhibit in Fall 2013. A prism map is a thematic map in which "each enumeration unit area as the base of a prism whose height is proportional to the intensity value of the mapped phenomenon" (Jenks and Caspall 1971, 219). These are seen by some cartographers as the most effective way of visualizing numerical data in a choropleth map (Slocum et al. 2004).
+This procedure will produce [prism maps](http://blog.thematicmapping.org/2008/05/prism-maps-in-google-earth-and-uuorld.html) (also called 3D Choropleth maps) according to the style developed by the author for the Political Space Economy Lab's "Moonlights, Sunspots, and Frontier Finance" exhibit in Fall 2013. A prism map is a thematic map in which "each enumeration unit area as the base of a prism whose height is proportional to the intensity value of the mapped phenomenon" (Jenks and Caspall 1971, 219). These are generally regarded as highly effective at communicating numerical data in choropleth maps (Slocum et al. 2004), though they pose some obvious problems (e.g., areal units with smaller variable values are hidden behind areal units with large values).
 
 The following software packages are required:  
   * ESRI ArcScene 10.1  
@@ -21,7 +21,7 @@ The following software packages are required:
 
 1. Add a connection to your project folder using the ArcScene catalog window. 
 ![arcscene](https://raw.githubusercontent.com/designedspace/MSFF_Docs/master/Files/Media/1_1_arcscene.PNG "ArcScene")  
-2. Add the shapefile that contains the data of interest (in this example, 2004 HMDA data aggregated to Census Tracts in Michigan), as well as any additional features that might prove cartographically useful (in this example, the Detroit municipal boundary, and the land areas of Ontario, Ohio, and Indiana).
+2. Add the shapefile that contains the data of interest (in this example, 2004 mortgage denial rates in Michigan census tracts), as well as any additional features that might prove cartographically useful (in this example, the Detroit municipal boundary, and the land areas of Ontario, Ohio, and Indiana).
 3. Check the scene's coordinate system; if the scene is not projected appropriately, select an appropriate projection. In this example, I used NAD_1927_Michigan_GeoRef_Feet_US.
 
 #### 1.2 Symbolize and Extrude Enumeration Units   
